@@ -11,6 +11,8 @@ resource "aws_vpc_peering_connection" "roboshop_peer" {
     allow_remote_vpc_dns_resolution = true
   }
 
+   auto_accept = true
+
   tags = merge(
     var.vpc_peering_tags,
     local.common_tags,
